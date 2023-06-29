@@ -53,6 +53,10 @@ h3 {
   background-image: url(./order.svg);
   background-repeat: no-repeat;
 }
+.order-now:hover {
+  background-color: var(--dark-yellow);
+  cursor: pointer;
+}
 img {
   max-width: 100%;
   -o-object-fit: cover;

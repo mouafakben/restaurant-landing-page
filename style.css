@@ -113,6 +113,10 @@ body {
 /* end of navbar */
 
 /* start of heading */
+header {
+  -webkit-margin-after: 30px;
+  margin-block-end: 30px;
+}
 header .head .container {
   display: flex;
   justify-content: space-between;
@@ -147,17 +151,67 @@ header .products {
 .products .container {
   padding-block: 40px;
   display: flex;
-  justify-content: space-between;
+  gap: 14px;
 }
 .products .product {
   flex-basis: 150px;
-  height: 300px;
-  background-color: #000;
-  margin: 5px;
 }
 .products .container .product:first-child {
   flex-grow: 1;
   background-image: url(./images/Rectangle-1.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+.products .container .product .content {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #fff;
+}
+.products .container .product .content span.title {
+  font-size: 22px;
+  font-weight: 700;
+}
+.products .container .product .content span.price {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 76%;
+}
+.products .container .product .content span.price span {
+  font-size: 18px;
+  font-weight: 500;
+}
+.products .container .product:last-child .content {
+  align-items: center;
+}
+.products .container .product:last-child .content {
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+.products .container .product:last-child {
+  position: relative;
+  text-align: center;
+}
+.products .container .product:last-child::after {
+  content: "show more";
+  display: block;
+  width: 129px;
+  height: 56px;
+  background-color: #000;
+  border-radius: 8px;
+  position: absolute;
+  top: 122px;
+  left: 11.5px;
+  color: var(--yellow);
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.products .container .product:nth-child(3) .content,
+.products .container .product:nth-child(5) .content {
+  flex-direction: column-reverse;
 }
